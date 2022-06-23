@@ -25,5 +25,5 @@ def strength():
     else:
         return "incorrect" 
 
-st.write("Set the Grinder to %s" % strength())
+st.write("Set the Breville Grinder to %s cups." % strength())
 
