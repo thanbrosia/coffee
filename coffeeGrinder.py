@@ -1,15 +1,16 @@
 import streamlit as st
 import math
+# 1 cup equals .75 tablepoons
 
-print("Welcome to the coffee selector.")
-coffeeInput = st.text_input("label goes here ")
+st.write("Welcome to the coffee selector.")
+coffeeInput = st.text_input("How do you like your coffee: Strong or Weak? ")
 #coffeeInput = input("Select Coffee Strength: Strong or Weak? ")
-coffeeVolume = st.text_input("Water filled to which line? ")
+coffeeVolume = st.number_input("Water filled to which line? ")
 #coffeeVolume = input("Water filled to what line on the coffee Pot? ")
 grind = 1.2381
 
 coffeePOTTOTAL = 4
-watercup = int(coffeeVolume) / 2
+watercup = coffeeVolume / 2
 tbSpoon = (2 * watercup)
 
 tbSpoon = tbSpoon / grind
@@ -23,3 +24,4 @@ def strength():
         return "incorrect" 
 
 st.write("Set the Grinder to %s" % strength())
+
