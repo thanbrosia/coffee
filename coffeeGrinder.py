@@ -2,9 +2,8 @@ import streamlit as st
 import math
 # 1 cup equals .75 tablepoons
 
-st.write("""Welcome to the coffee selector.
-The below is to help know which grinder setting to use
-depending on how much coffee you're tring to make.""")
+st.markdown("<h1 style='text-align: center; '>Coffee Magic</h1>", unsafe_allow_html=True)
+st.write("Welcome to the coffee selector.")
 coffeeInput = st.text_input("How do you like your coffee: Strong or Weak? ")
 #coffeeInput = input("Select Coffee Strength: Strong or Weak? ")
 coffeeVolume = st.number_input("Water filled to which line? ")
@@ -25,5 +24,4 @@ def strength():
     else:
         return "incorrect" 
 
-st.write("Set the Breville Grinder to %s cups." % strength())
-
+st.write("Set the Grinder to %s" % strength())
